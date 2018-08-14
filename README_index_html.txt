@@ -1,2 +1,11 @@
 In order to use NVD3 one needs to download all necessary files from http://nvd3.org (Getting Started) as described
-by https://www.youtube.com/watch?v=IPwe3LaZ4Eg for instance.
+by https://www.youtube.com/watch?v=IPwe3LaZ4Eg for instance. NVD3 doesn't work with the latest version of D3j. Therefore one has to use version 3.
+
+d3v3.js: https://d3js.org/d3.v3.min.js
+nvd3_181.js: https://cdn.rawgit.com/novus/nvd3/v1.8.1/build/nv.d3.min.js
+nvd3_181.css: https://cdn.rawgit.com/novus/nvd3/v1.8.1/build/nv.d3.css into styles
+jquery331.js: https://code.jquery.com/jquery-3.3.1.min.js Jquery because it makes working simpler
+bootstrap_337: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+
+The server runs via Python. (Go to folder with the index.html and type: <python -m http.server)
+To visit the website type: <localhost:8000>
