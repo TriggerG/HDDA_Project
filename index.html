@@ -6,14 +6,17 @@ scripts/stylesheets for Nvd3 -->
 
 <head>
 
+  <title>MinPathPred</title>
   <!-- meta for bootstrap to work properly -->
   <meta charset ="utf-8">
-  <meta name ="viewport" content="width=device-width, initial-scale=1">
+  <meta name ="viewport" content="width=device-width, initial-scale=1"> <!-- works on all devices and resolutions -->
 
+  <!-- links all lokal .css stylesheets -->
   <link rel="stylesheet" href="styles/nvd3_181.css">
   <link rel="stylesheet" href="styles/bootstrap_337.css">
   <link rel="stylesheet" href="styles/styles.css">
 
+  <!-- links all lokal javascript files -->
   <script src="scripts/framework/jquery331.js"> </script>
   <script src="scripts/framework/d3v3.js"> </script>
   <script src="scripts/framework/nvd3_181.js"> </script>
@@ -24,20 +27,49 @@ scripts/stylesheets for Nvd3 -->
 </head>
 
 <body>
+  <!-- fixed navigation bar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"> Metabolic Pathway Prediction </a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"> Start </a></li>
+        <li><a href="#"> Table </a></li>
+        <li><a href="#"> Graph </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- jumbotron containing header -->
+  <div class="jumbotron mb-0">
+    <div class="container">
+        <h1 class="display-3"> Metabolic Pathway Prediction </h1>
+    </div>
+  </div>
 
   <div class="container">
 
+    <!-- container with table -->
+    <div id="table-container">
+      <h1 id="minpathcontainer" style="padding-top: 80px;"> Table Minimum Pathways </h1>
+        <p>This table gives an overview of the Metabolic Pathways predicted by MinPath.</p>
+    </div>
+    <div id="tablewrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+    </div>
+
     <div class="row">
       <div class="col-sm-12">
-          <h2> NVD3 test </h2>
+          <h1> NVD3 test </h1>
           <button type="button" class="btn btn-primary" id="btnLoadChart"> Load Chart </button>
       </div>
     </div>
 
+<!-- header and load button; contains the graph -->
       <div class="row">
           <div class="col-sm-12">
           <div class="panel panel-primary">
-            <div class="panel-heading"> NVD3 Chart </div>
+            <div class="panel-heading"> NVD3 Barchart </div>
             <div class="panel-body">
               <div id="chart">
                 <svg></svg>
@@ -46,8 +78,7 @@ scripts/stylesheets for Nvd3 -->
           </div>
         </div>
       </div>
-
-    </div>
+  </div>
 
 </body>
 
