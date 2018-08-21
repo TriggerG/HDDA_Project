@@ -22,13 +22,30 @@ var drawChart = function() {
   return chart;
 });
 };
+
 var drawChart2 = function() {
 d3.json("scripts/full.json", function (error, data) {
   console.log(data);
   nv.addGraph(function() {
     var chart = nv.models.discreteBarChart()
-      .x(function() { return d.id}) //label from testdata.js as x value <console.log('d:' , d);>
-      .y(function() { return d.count}) //value from testdata.js as y value
+      .x(function(d) {
+        console.log(d);
+        for (var i = 0; i < data.length; i++) {
+          if (key == "id")  {
+            return key
+          }
+        }
+      }
+    )
+      .y(function(d) {
+        console.log(d);
+        for (var i = 0; i < data.length; i++) {
+          if (key == "count")  {
+            return key
+          }
+        }
+      }
+    )
       .staggerLabels(true) //staggered x-labels
       .showValues(true)
       chart.tooltip.enabled(true);
