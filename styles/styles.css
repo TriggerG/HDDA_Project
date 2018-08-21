@@ -2,6 +2,9 @@
   height: 400px;
 }
 
+#chart2 svg {
+  height: 400px;
+}
 div.row {
     margin-top: 10px;
 }
