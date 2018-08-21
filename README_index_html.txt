@@ -21,3 +21,7 @@ https://www.w3schools.com/
 https://www.w3schools.com/howto/default.asp
 
 https://www.w3schools.com/howto/howto_website.asp #navigation bar
+
+# Chart Templates #
+http://mbostock.github.io/d3/talk/20111116/bar-hierarchy.html
+http://bl.ocks.org/Caged/6476579 # bar chart# 

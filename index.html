@@ -6,7 +6,7 @@ scripts/stylesheets for Nvd3 -->
 
 <head>
 
-  <title>MinPathPred</title>
+  <title> MetaPathPrediction </title>
   <!-- meta for bootstrap to work properly -->
   <meta charset ="utf-8">
   <meta name ="viewport" content="width=device-width, initial-scale=1"> <!-- works on all devices and resolutions -->
@@ -34,9 +34,9 @@ scripts/stylesheets for Nvd3 -->
         <a class="navbar-brand" href="#"> Metabolic Pathway Prediction </a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#"> Start </a></li>
-        <li><a href="#"> Table </a></li>
-        <li><a href="#"> Graph </a></li>
+        <li class="active"> <a href="#"> Start </a> </li>
+        <li> <a href="#"> Table </a> </li>
+        <li> <a href="#btnLoadChart"> Graph </a> </li>
       </ul>
     </div>
   </nav>
@@ -53,15 +53,13 @@ scripts/stylesheets for Nvd3 -->
     <!-- container with table -->
     <div id="table-container">
       <h1 id="minpathcontainer" style="padding-top: 80px;"> Table Minimum Pathways </h1>
-        <p>This table gives an overview of the Metabolic Pathways predicted by MinPath.</p>
-    </div>
-    <div id="tablewrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+        <p> This table gives an overview of the Metabolic Pathways predicted by MinPath. </p>
     </div>
 
     <div class="row">
       <div class="col-sm-12">
           <h1> NVD3 test </h1>
-          <button type="button" class="btn btn-primary" id="btnLoadChart"> Load Chart </button>
+          <button type="button" class="btn btn-primary" id="btnLoadCharts"> Load Charts </button>
       </div>
     </div>
 
@@ -69,7 +67,7 @@ scripts/stylesheets for Nvd3 -->
       <div class="row">
           <div class="col-sm-12">
           <div class="panel panel-primary">
-            <div class="panel-heading"> NVD3 Barchart </div>
+            <div class="panel-heading"> Number of Accessory Pathways </div>
             <div class="panel-body">
               <div id="chart">
                 <svg></svg>
@@ -78,6 +76,20 @@ scripts/stylesheets for Nvd3 -->
           </div>
         </div>
       </div>
+
+      <div class="row">
+          <div class="col-sm-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading"> Number of Accessory Pathways </div>
+            <div class="panel-body">
+              <div id="horizontalchartS">
+                <svg></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
   </div>
 
 </body>
