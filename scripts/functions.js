@@ -1,3 +1,6 @@
+
+
+
 // function for barchart //
 var drawChart = function() {
   nv.addGraph(function() {
@@ -21,10 +24,11 @@ var drawChart = function() {
 };
 var drawChart2 = function() {
 d3.json("scripts/full.json", function (error, data) {
+  console.log(data);
   nv.addGraph(function() {
     var chart = nv.models.discreteBarChart()
-      .x(function(d) { return data.id}) //label from testdata.js as x value <console.log('d:' , d);>
-      .y(function(d) { return data.count }) //value from testdata.js as y value
+      .x(function() { return d.id}) //label from testdata.js as x value <console.log('d:' , d);>
+      .y(function() { return d.count}) //value from testdata.js as y value
       .staggerLabels(true) //staggered x-labels
       .showValues(true)
       chart.tooltip.enabled(true);
