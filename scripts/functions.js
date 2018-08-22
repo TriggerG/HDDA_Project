@@ -25,30 +25,16 @@ var drawChart = function() {
 
 var drawChart2 = function() {
 d3.json("scripts/full.json", function (error, data) {
-  console.log(data);
+  console.log(data[0]["id"]);
   nv.addGraph(function() {
     var chart = nv.models.discreteBarChart()
-      .x(function(d) {
-        console.log(d);
-        for (var i = 0; i < data.length; i++) {
-          if (key == "id")  {
-            return key
-          }
-        }
-      }
-    )
-      .y(function(d) {
-        console.log(d);
-        for (var i = 0; i < data.length; i++) {
-          if (key == "count")  {
-            return key
-          }
-        }
-      }
-    )
-      .staggerLabels(true) //staggered x-labels
-      .showValues(true)
-      chart.tooltip.enabled(true);
+    .x(function(d) {
+      console.log(d);
+      return d[0]["id"] }) //label from testdata.js as x value <console.log('d:' , d);>
+    .y(function(d) { return d[0]["count"] }) //value from testdata.js as y value
+    .staggerLabels(true) //staSggered x-labels
+    .showValues(true)
+    chart.tooltip.enabled(true);
 
   d3.select('#chart2 svg')
     .datum(data) //submit data to draw the chart
