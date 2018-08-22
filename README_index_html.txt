@@ -29,3 +29,9 @@ http://bl.ocks.org/Caged/6476579 # bar chart#
 
 # full.json
 find },{' and replace with '},\n' for better structure
+
+# console.log(data[0]);
+
+# sorting bars? http://jsfiddle.net/enigmarm/3HL4a/13/
+
+# tutorial Oreilly https://resources.oreilly.com/examples/0636920026938/blob/master/chapter_10/04_mouseover.html

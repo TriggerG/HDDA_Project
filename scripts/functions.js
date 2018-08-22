@@ -1,7 +1,4 @@
-
-
-
-// function for barchart //
+// function for discrete barchart //
 var drawChart = function() {
   nv.addGraph(function() {
     var chart = nv.models.discreteBarChart()
@@ -24,14 +21,14 @@ var drawChart = function() {
 };
 
 var drawChart2 = function() {
-d3.json("scripts/full.json", function (error, data) {
-  console.log(data[0]["id"]);
+d3.json("full.json", function (error, data) {
+  console.log(data);
   nv.addGraph(function() {
     var chart = nv.models.discreteBarChart()
     .x(function(d) {
       console.log(d);
-      return d[0]["id"] }) //label from testdata.js as x value <console.log('d:' , d);>
-    .y(function(d) { return d[0]["count"] }) //value from testdata.js as y value
+      return d.id}) //label from testdata.js as x value <console.log('d:' , d);>
+    .y(function(d) { return d.count }) //value from testdata.js as y value
     .staggerLabels(true) //staSggered x-labels
     .showValues(true)
     chart.tooltip.enabled(true);
@@ -48,6 +45,8 @@ d3.json("scripts/full.json", function (error, data) {
 });
 });
 };
+
+// function for ordered barchart
 
 // function for loading graphs //
 $(function() {
