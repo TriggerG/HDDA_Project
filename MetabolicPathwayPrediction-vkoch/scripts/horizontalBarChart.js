@@ -31,11 +31,11 @@ var horiBarChart = function() {
         // custom tooltip
         chart.tooltip.contentGenerator(function (obj) {
           var format = d3.format(",d");
-
-          return '<table><thead><tr><td class=x-value colspan=3><h1 class=tooltip>' + obj.data.key + '</h1></td></tr></thead>' +
-              '<tbody><tr><td class=key> Frequency of Occurence:</td><td class=value>' + obj.data.count + '</td></tr>' +
-              '<tr><td class=key>Available In Species: </td><td class=value>' + obj.data.availableInSpec + '</td></tr>' +
+          return '<table class= "bartable"> <thead><tr><td class=x-value colspan=5><h1 class= tooltip>' + obj.data.key + '</h1></td></tr></thead>' +
+              '<tbody><tr><td class=key> Frequency of Occurence:</td><td class = "dcount">' + obj.data.count + '</td></tr>' + //dcount in styles.css
+              '<tr><td class=key>Available In Species: </td><td class= "dspec"> <span class= "sspec"' + obj.data.availableInSpec + '</td></tr>' +
               '</tbody></table>'
+
           });
     chart.tooltip.gravity("e") //tooltip right from curser
     chart.yAxis
