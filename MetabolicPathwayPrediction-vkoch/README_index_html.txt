@@ -28,3 +28,9 @@ http://bl.ocks.org/Caged/6476579 # bar chart#
 
 #customizing barchart #
 https://nvd3-community.github.io/nvd3/examples/documentation.html#multiBarHorizontal
+
+#hover over barchart and corresponding values #
+https://gist.github.com/Kyeongan/a0a405d1f895b48a236335a3f2e04229
+
+# more styles for nv.tooltip # 
+https://github.com/saeidzebardast/nvd3-elements/blob/master/nvd3-tooltip-styles.html

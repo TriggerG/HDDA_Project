@@ -1,7 +1,65 @@
-#horizontalBarChart svg {
-  height: 800px;
-}
+        #horizontalBarChart svg {
+          height: 800px;
+        }
 
-div.row {
-    margin-top: 10px;
-}
+        div.row {
+            margin-top: 10px;
+        }
+        
+        .nvtooltip { margin-left: 0px;
+        }
+
+        .jumbotron {
+            background-color: #495f78;
+            color: #ffffff;
+            padding: 60px 25px;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+            background-color: #2d2d2d;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+        }
+
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+        }
+
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #2d2d2d !important;
+            background-color: #fff !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #2d2d2d !important;
+        }
+
+        .container-fluid {
+            padding: 30px 50px;
+
+        }
+
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+
+        .item span {
+            font-style: normal;
+        }
+
+        footer {
+            color: #9c9c9c;
+        }
+
+        footer .navarrow {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #495f78;
+        }
