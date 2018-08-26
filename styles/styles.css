@@ -1,12 +1,7 @@
-#chart svg {
-  height: 400px;
-}
 
-#chart2 svg {
-  height: 400px;
-}
-#chart3 svg {
-  height: 400px;
+#horizontalbarchart svg {
+  height: 800px;
+  padding-left: 100px;
 }
 
 div.row {
