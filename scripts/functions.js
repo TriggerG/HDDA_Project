@@ -21,7 +21,7 @@ var drawChart = function() {
 };
 
 var drawChart2 = function() {
-d3.json("full.json", function (error, data) {
+d3.json("scripts/full.json", function (error, data) {
   console.log(data);
   nv.addGraph(function() {
     var chart = nv.models.discreteBarChart()
