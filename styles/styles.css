@@ -13,17 +13,22 @@
 }
 
 #horizontalBarChart svg {
-  min-height: 600px;
+  min-height: 500px;
   height: auto;
 }
 
-/* Sytle for the table in barChart tooltips */
+/* style for the table in barChart tooltips
+spacer between 2 table columns */
 
 .spacer {
   width: 5px;
 }
+.thnumber {
+  align: right;
+}
 .thspec {
   vertical-align:top;
+  align: right;
 }
 
 div.row {
