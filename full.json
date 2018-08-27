@@ -1,4 +1,4 @@
-var fullData = [
+[
     {
         "id": "00010",
         "name": "Glycolysis / Gluconeogenesis ",
@@ -4898,10 +4898,4 @@ var fullData = [
         "count": 2,
         "description": "NA"
     }
-];
-var params={
-    "species": "Escherichia coli",
-    "individuals": 10,
-    "in": "/vol/lehre/m-bs2-s4b/project_workdirs/metabolic_net_1/data/Escherichia_coli",
-    "out": "/vol/lehre/m-bs2-s4b/project_workdirs/metabolic_net_1/"
-};
+]

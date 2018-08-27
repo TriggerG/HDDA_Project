@@ -6,12 +6,11 @@ The consturctor of the multiBarHorizontalChart needed to be altered. THe margins
 */
 
 function filterClass(value, index, array) {
-  if (value.class == "a") { return value } //only values with accessory Pathways
+  if (value.class === "accessory") { return value } //only values with accessory Pathways
 }
 
 accessData = fullData.filter(filterClass) // filtering inputdata
 accessData.sort(function(a,b) { return b.count - a.count}) // sort descending
-console.log(accessData)
 
 graphData = [{
   "key":"frequency of occurence",
@@ -28,15 +27,6 @@ var horiBarChart = function() {
         .showValues(true)
         .showControls(false);
 
-        // custom tooltip
-        chart.tooltip.contentGenerator(function (obj) {
-          var format = d3.format(",d");
-          return '<table class= "bartable"> <thead><tr><td class=x-value colspan=5><h1 class= tooltip>' + obj.data.key + '</h1></td></tr></thead>' +
-              '<tbody><tr><td class=key> Frequency of Occurence:</td><td class = "dcount">' + obj.data.count + '</td></tr>' + //dcount in styles.css
-              '<tr><td class=key>Available In Species: </td><td class= "dspec"> <span class= "sspec"' + obj.data.availableInSpec + '</td></tr>' +
-              '</tbody></table>'
-
-          });
     chart.tooltip.gravity("e") //tooltip right from curser
     chart.yAxis
         .tickFormat(d3.format(',.2f'))
@@ -46,6 +36,16 @@ var horiBarChart = function() {
         .datum(graphData)
         .transition().duration(500)
         .call(chart);
+        // custom tooltip
+   chart.tooltip.gravity("e") //tooltip right from curser
+   chart.tooltip.contentGenerator(function (obj) {
+     var format = d3.format(",d");
+     return '<table class= "bartable"> <thead><tr><td class=x-value colspan=5><h1 class= tooltip>' + obj.data.key + '</h1></td></tr></thead>' +
+         '<tbody><tr><td class=key> Frequency of Occurence:</td><td class = "dcount">' + obj.data.count + '</td></tr>' + //dcount in styles.css
+         '<tr><td class=key>Available In Species: </td> <td class= "dspec">' + obj.data.availableInSpec + '</td></tr>' +
+         '</tbody></table>'
+
+     });
 
     nv.utils.windowResize(chart.update)
 

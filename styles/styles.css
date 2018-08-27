@@ -1,9 +1,121 @@
+/* MPP Custom CSS */
 
-#horizontalbarchart svg {
-  height: 800px;
-  padding-left: 100px;
+#chart svg {
+  height: 400px;
+}
+
+#piechart svg {
+    height: 400px;
+}
+
+#sunburst svg {
+    height: 400px;
+}
+
+#horizontalBarChart svg {
+  height: 600px;
+}
+
+/* Sytle for the table in barChart tooltips */
+.dcount {
+    align: "left";
 }
 
 div.row {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
+.data {
+    padding: 30px 60px;
+}
+
+.jumbotron {
+    background-color: #495f78;
+    color: #ffffff;
+    padding: 60px 40px;
+    font-family: Montserrat, sans-serif;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #2d2d2d;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #2d2d2d !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #2d2d2d !important;
+}
+
+.bg-grey {
+    background-color: #f6f6f6;
+}
+
+footer {
+    color: #9c9c9c;
+}
+
+footer .navarrow {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #495f78;
+}
+
+.nvd3.nv-pie.nv-chart-donut1 .nv-pie-title {
+    opacity: 0.4;
+    fill: rgba(224, 116, 76, 0.91);
+}
+
+td.highlight {
+    background-color: whitesmoke !important;
+}
+
+/*
+
+ position chart
+#piechart {
+    height: 350px !important;
+    width: 350px !important;
+}
+*/
+
+
+/*
+#tooltip {
+    position: absolute;
+    z-index: 1001;
+    display: none;
+    border: 2px solid #ebebeb;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+}
+*/
+
+/* Style if using fixed columns
+//Ensure that the demo table scrolls
+th, td { white-space: nowrap; }
+div.dataTables_wrapper {
+    margin: 0 auto;
+}
+*/
+
+
+
+
