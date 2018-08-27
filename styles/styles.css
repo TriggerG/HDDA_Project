@@ -13,12 +13,19 @@
 }
 
 #horizontalBarChart svg {
-  height: 600px;
+  min-height: 600px;
+  height: auto;
 }
 
 /* Sytle for the table in barChart tooltips */
-.dcount {
+
+.tdcount {
     align: "left";
+}
+
+.dspec {
+  word-break: break-all;
+  word-wrap: break-word;
 }
 
 div.row {
@@ -115,7 +122,3 @@ div.dataTables_wrapper {
     margin: 0 auto;
 }
 */
-
-
-
-
