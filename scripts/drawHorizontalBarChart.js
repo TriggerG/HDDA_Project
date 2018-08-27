@@ -27,7 +27,7 @@ var horiBarChart = function() {
 
     chart.yAxis
         .tickFormat(d3.format(',d'))    //the y-axis is actually the x-axis because the chart is rotated
-        .axisLabel("Number of Bacteria Featuring the Pathway");
+        .axisLabel("Quantity of Accessory Pathways");
 
 
 
@@ -43,16 +43,21 @@ var horiBarChart = function() {
           var format = d3.format(",d");
           var arraySpecies = extractSpecies(obj.data.availableInSpec);
           var txt = "";
-          arraySpecies.forEach(funcName);
+          arraySpecies.forEach(speciesToString);
 
-          function funcName (value, index, array) {
+          function speciesToString(value, index, array) {
+            if (index % 3 == 0 && index != 0) {
+            txt = txt + value.species + " " + value.lineage + "; "  + "<br>" + "</br>"
+            }
+            else {
             txt = txt + value.species + " " + value.lineage + "; "
+            }
           }
           console.log(txt);
 
           return  '<table class="bartable"><thead><tr><td class=x-value colspan=3> <h1 class= tooltip>' + obj.data.key + '</h1></td></tr></thead>' +
-                  '<tbody><tr><td class=key> Frequency of Occurence:</td><td class = "tdcount">' + obj.data.count + '</td></tr>' + //dcount in styles.css
-                  '<tr><td class=key>Available In Species: </td> <td class= "tdspec">' + txt + '</td></tr>' +
+                  '<tbody><tr><th class= "thnumber"> Number of Occurence: </th> <td class= "spacer"> </td> <td class = "tdcount">' + "  " + obj.data.count + '</td></tr>' + //dcount in styles.css
+                  '<tr><th class= "thspec"> Available In Species: </th> <td class "spacer"> </td> <td class= "tdspec">' + txt + '</td></tr>' +
                   '</tbody></table>'
         });
 

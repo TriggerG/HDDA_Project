@@ -19,13 +19,11 @@
 
 /* Sytle for the table in barChart tooltips */
 
-.tdcount {
-    align: "left";
+.spacer {
+  width: 5px;
 }
-
-.dspec {
-  word-break: break-all;
-  word-wrap: break-word;
+.thspec {
+  vertical-align:top;
 }
 
 div.row {
