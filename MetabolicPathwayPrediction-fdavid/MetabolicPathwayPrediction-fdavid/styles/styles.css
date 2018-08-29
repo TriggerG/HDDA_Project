@@ -1,4 +1,8 @@
-/* MPP Custom CSS */
+/*
+-----------------------------------------------------------------------------------------------------
+Custom style sheet for Metabolic Pathway Prediction Pipeline Report
+-----------------------------------------------------------------------------------------------------
+*/
 
 #chart svg {
   height: 400px;
@@ -13,12 +17,12 @@
 }
 
 #horizontalBarChart svg {
-  min-height: 500px;
-  height: auto;
+  min-height: 700px;
+  height: inherit;
 }
 
 /* style for the table in barChart tooltips
-spacer between 2 table columns */
+spacer between two columns */
 
 .spacer {
   width: 5px;
@@ -26,13 +30,13 @@ spacer between 2 table columns */
 .thnumber {
   align: right;
 }
+
 .thspec {
   vertical-align:top;
   align: right;
 }
 .tdspec {
-  white-space: pre;
-  word-spacing: normal;
+  white-space: pre;     /* allow preformatted text (newline) */
 }
 
 div.row {
@@ -95,37 +99,3 @@ footer .navarrow {
     opacity: 0.4;
     fill: rgba(224, 116, 76, 0.91);
 }
-
-td.highlight {
-    background-color: whitesmoke !important;
-}
-
-/*
-
- position chart
-#piechart {
-    height: 350px !important;
-    width: 350px !important;
-}
-*/
-
-
-/*
-#tooltip {
-    position: absolute;
-    z-index: 1001;
-    display: none;
-    border: 2px solid #ebebeb;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #fff;
-}
-*/
-
-/* Style if using fixed columns
-//Ensure that the demo table scrolls
-th, td { white-space: nowrap; }
-div.dataTables_wrapper {
-    margin: 0 auto;
-}
-*/

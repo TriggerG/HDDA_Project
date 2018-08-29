@@ -33,16 +33,14 @@ var horiBarChart = function() {
         .gravity("e")                                                     // tooltip right from curser
         .contentGenerator(function (obj) {                                // the function returns the table for the tooltip for each bar
           var arraySpecies = extractSpecies(obj.data.availableInSpec);    // it extracts the whole array 'availableInSpec'
+          arraySpecies.sort(function(a,b) { return a.species - b.species})
+          arraySpecies.sort(function(a,b) { return a.lineage - b.lineage})
           var specText = "";
           arraySpecies.forEach(speciesToString);                          // content of the array is stored in 'specText'
 
           function speciesToString(value, index, array) {                 // extracts the content of an array and inserts single line breaks for the table
-              if (index % 3 == 0 && index != 0) {
-              specText = specText + value.species + " " + value.lineage + "; "  + "<br>" + "</br>"
-              }
-              else {
-              specText = specText + value.species + " " + value.lineage + "; "
-              }
+              specText = specText + value.species + " " + value.lineage + "; " + "\n"
+
           }
 
           return  '<table class= "bartable" > <thead> <tr> <td class=x-value colspan=3> <h5 class= "hname">' + obj.data.name + '</h5> </td> </tr> </thead>' +
@@ -67,3 +65,14 @@ function filterClass(value, index, array) {             // it filters only acces
   if (value.class === "accessory") { return value }
 }
 function extractSpecies (value, index, array) {return value};
+
+/*
+function speciesToString(value, index, array) {                 // extracts the content of an array and inserts single line breaks for the table
+    if (index % 2 == 0 && index != 1 ) {
+    specText = specText + value.species + " " + value.lineage + "; "
+    }
+    else {
+    specText = specText + value.species + " " + value.lineage + "; " + "\n"
+    }
+}
+*/

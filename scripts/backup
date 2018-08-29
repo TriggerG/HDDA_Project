@@ -1,9 +1,0 @@
-chart.tooltip.contentGenerator(function (obj) {
-  console.log(obj);
-  var format = d3.format(",d");
-  return '<table class= "bartable"> <thead><tr><td class=x-value colspan=5><h1 class= tooltip>' + obj.data.key + '</h1></td></tr></thead>' +
-      '<tbody><tr><td class=key> Frequency of Occurence:</td><td class = "tdcount">' + obj.data.count + '</td></tr>' + //dcount in styles.css
-      '<tr><td class=key>Available In Species: </td> <td class= "tdspec">' + obj.data.availableInSpec + '</td></tr>' +
-      '</tbody></table>'
-
-  });

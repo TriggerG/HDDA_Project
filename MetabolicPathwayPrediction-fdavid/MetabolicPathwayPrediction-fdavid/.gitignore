@@ -1,0 +1,8 @@
+.nextflow.log*
+.nextflow/
+work/
+.idea
+scripts/full.js
+full.json
+Test/
+results.zip
